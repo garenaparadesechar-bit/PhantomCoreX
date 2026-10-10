@@ -1,7 +1,3 @@
 <resources>
-    <string name="app_name">Phantom Core X</string>
-    <string name="nav_home">Inicio</string>
-    <string name="nav_games">Juegos</string>
-    <string name="nav_console">Consola</string>
-    <string name="nav_settings">Ajustes</string>
+    <string name="app_name">PHX</string>
 </resources>

@@ -1,9 +1,11 @@
 package com.phx.corex;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -11,18 +13,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView nav = findViewById(R.id.bottom_nav);
-        nav.setOnItemSelectedListener(item -> {
-            Fragment f = null;
-            if (item.getItemId() == R.id.nav_home) f = new HomeFragment();
-            else if (item.getItemId() == R.id.nav_games) f = new GamesFragment();
-            else if (item.getItemId() == R.id.nav_console) f = new ConsoleFragment();
-            else if (item.getItemId() == R.id.nav_settings) f = new SettingsFragment();
-            
-            if (f != null) getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, f).commit();
-            return true;
+        TextView tvInfo = findViewById(R.id.tv_info);
+        tvInfo.setText("¡PHX compilado exitosamente!");
+
+        Button btnTurbo = findViewById(R.id.btn_turbo);
+        btnTurbo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "¡TURBO CORE activado!", Toast.LENGTH_SHORT).show();
+            }
         });
-        
-        if (savedInstanceState == null) nav.setSelectedItemId(R.id.nav_home);
     }
 }
