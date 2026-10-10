@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#05050A" android:gravity="center" android:orientation="vertical">
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="PHANTOM CORE X" android:textColor="#B24BF3" android:textSize="24sp" android:textStyle="bold"/>
-    <Button android:id="@+id/btn" android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="TURBO" android:layout_marginTop="20dp" android:backgroundTint="#B24BF3"/>
-</LinearLayout>
+    android:background="@color/phx_dark">
+
+    <FrameLayout android:id="@+id/fragment_container"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_marginBottom="56dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="bottom" android:background="@color/phx_dark"
+        app:itemIconTint="@color/phx_purple" app:itemTextColor="@color/phx_purple"
+        app:menu="@menu/bottom_nav_menu" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
