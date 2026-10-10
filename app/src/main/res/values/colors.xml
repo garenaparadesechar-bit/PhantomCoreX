@@ -4,4 +4,5 @@
     <color name="phx_purple">#B24BF3</color>
     <color name="phx_white">#FFFFFF</color>
     <color name="phx_glass">#1A1A1F2E</color>
+    <color name="phx_success">#4DFFB0</color>
 </resources>

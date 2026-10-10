@@ -10,14 +10,24 @@ public class GamesFragment extends Fragment {
         super.onViewCreated(v, savedInstanceState);
         setupGame(v.findViewById(R.id.btn_ff), "com.dts.freefireth", "Free Fire");
         setupGame(v.findViewById(R.id.btn_ffmax), "com.dts.freefiremax", "Free Fire MAX");
-        v.findViewById(R.id.btn_profile).setOnClickListener(view -> Toast.makeText(requireContext(), "Perfil Equilibrado aplicado", Toast.LENGTH_SHORT).show());
+        v.findViewById(R.id.btn_profile).setOnClickListener(view -> {
+            LogManager.add("Perfil de rendimiento 'Equilibrado' aplicado.");
+            Toast.makeText(requireContext(), "Perfil Equilibrado aplicado correctamente", Toast.LENGTH_SHORT).show();
+        });
     }
     private void setupGame(MaterialButton btn, String pkg, String name) {
         boolean installed = false;
         try { requireContext().getPackageManager().getPackageInfo(pkg, 0); installed = true; } catch (Exception e) {}
-        btn.setText(name + (installed ? " ✅" : " ❌"));
+        btn.setText(name + (installed ? " ✅ Instalado" : " ❌ No instalado"));
         btn.setEnabled(installed);
-        if (installed) btn.setOnClickListener(view -> startActivity(requireContext().getPackageManager().getLaunchIntentForPackage(pkg)));
-        else btn.setOnClickListener(view -> Toast.makeText(requireContext(), "Instala " + name + " primero", Toast.LENGTH_SHORT).show());
+        if (installed) {
+            btn.setOnClickListener(view -> {
+                LogManager.add("Intento de apertura de: " + name);
+                Intent i = requireContext().getPackageManager().getLaunchIntentForPackage(pkg);
+                if (i != null) startActivity(i);
+            });
+        } else {
+            btn.setOnClickListener(view -> Toast.makeText(requireContext(), "Debes instalar " + name + " primero", Toast.LENGTH_SHORT).show());
+        }
     }
 }

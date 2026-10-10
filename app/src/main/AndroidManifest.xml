@@ -3,8 +3,10 @@
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
     <application
         android:allowBackup="true"
+        android:icon="@drawable/ic_app_logo"
         android:label="Phantom Core X"
-        android:theme="@style/Theme.PHX">
+        android:theme="@style/Theme.PHX"
+        android:supportsRtl="true">
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent" android:padding="16dp">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PHANTOM CORE X"
-            android:textColor="@color/phx_purple" android:textSize="22sp" android:textStyle="bold" android:layout_gravity="center" android:layout_marginBottom="20dp"/>
+            android:textColor="@color/phx_purple" android:textSize="24sp" android:textStyle="bold" android:layout_gravity="center" android:layout_marginBottom="20dp"/>
         <TextView android:id="@+id/tv_stats" android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:text="Cargando..." android:textColor="@color/phx_white" android:background="@drawable/bg_card" android:padding="15dp" android:layout_marginBottom="20dp"/>
+            android:text="Cargando métricas..." android:textColor="@color/phx_white" android:background="@drawable/bg_card" android:padding="15dp" android:layout_marginBottom="20dp"/>
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_turbo" android:layout_width="match_parent" android:layout_height="60dp"
-            android:text="TURBO CORE" android:textSize="18sp" android:textStyle="bold"
+            android:text="EJECUTAR TURBO CORE" android:textSize="16sp" android:textStyle="bold"
             app:backgroundTint="@color/phx_purple" app:cornerRadius="12dp" />
     </LinearLayout>
 </ScrollView>

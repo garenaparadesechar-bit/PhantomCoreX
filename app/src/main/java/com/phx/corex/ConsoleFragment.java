@@ -8,6 +8,11 @@ public class ConsoleFragment extends Fragment {
     @Override public void onViewCreated(@NonNull View v, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(v, savedInstanceState);
         TextView log = v.findViewById(R.id.tv_log);
-        log.setText("> Sistema iniciado...\n> Batería y RAM leídos correctamente.\n> Game Hub cargado.\n> Listo para optimizar.\n");
+        log.setText(LogManager.get());
+    }
+    @Override public void onResume() {
+        super.onResume();
+        TextView log = getView() != null ? getView().findViewById(R.id.tv_log) : null;
+        if (log != null) log.setText(LogManager.get());
     }
 }

@@ -30,6 +30,7 @@ public class AppsFragment extends Fragment {
             AppItem app = items.get(position);
             holder.name.setText(app.name); holder.pkg.setText(app.pkg); holder.icon.setImageDrawable(app.icon);
             holder.btn.setOnClickListener(v -> {
+                LogManager.add("Gestionando app: " + app.name);
                 Intent i = new Intent(Intent.ACTION_DELETE, Uri.parse("package:" + app.pkg));
                 startActivity(i);
             });

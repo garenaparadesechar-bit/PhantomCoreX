@@ -7,5 +7,5 @@
         <TextView android:id="@+id/tv_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/phx_white" android:textSize="14sp" android:singleLine="true"/>
         <TextView android:id="@+id/tv_pkg" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#B3FFFFFF" android:textSize="11sp" android:singleLine="true"/>
     </LinearLayout>
-    <Button android:id="@+id/btn_action" android:layout_width="wrap_content" android:layout_height="40dp" android:text="Abrir" style="?attr/borderlessButtonStyle" android:textColor="@color/phx_purple"/>
+    <Button android:id="@+id/btn_action" android:layout_width="wrap_content" android:layout_height="40dp" android:text="Gestionar" style="?attr/borderlessButtonStyle" android:textColor="@color/phx_purple"/>
 </LinearLayout>

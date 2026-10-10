@@ -2,11 +2,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent" android:padding="16dp">
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
-        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AJUSTES"
-            android:textColor="@color/phx_purple" android:textSize="22sp" android:textStyle="bold" android:layout_marginBottom="20dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AJUSTES DEL SISTEMA"
+            android:textColor="@color/phx_purple" android:textSize="24sp" android:textStyle="bold" android:layout_marginBottom="20dp"/>
         <TextView android:id="@+id/tv_version" android:layout_width="match_parent" android:layout_height="wrap_content"
             android:text="Versión: 1.0.0" android:textColor="@color/phx_white" android:background="@drawable/bg_card" android:padding="15dp" android:layout_marginBottom="10dp"/>
         <TextView android:id="@+id/tv_shizuku" android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:text="Shizuku: No iniciado" android:textColor="@color/phx_white" android:background="@drawable/bg_card" android:padding="15dp" android:layout_marginBottom="10dp"/>
+            android:text="Shizuku: No iniciado (Opcional)" android:textColor="@color/phx_white" android:background="@drawable/bg_card" android:padding="15dp" android:layout_marginBottom="10dp"/>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_privacy" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Política de Privacidad" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:textColor="@color/phx_purple"/>
     </LinearLayout>
 </ScrollView>
