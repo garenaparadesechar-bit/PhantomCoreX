@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.PHX" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/phx_purple</item>
+        <item name="android:colorBackground">@color/phx_bg</item>
+        <item name="colorSurface">@color/phx_glass</item>
+        <item name="colorOnSurface">@color/phx_white</item>
+    </style>
+</resources>
